@@ -1,0 +1,18 @@
+import capos.*
+
+describe "rolando"{
+
+ test"encontrado con limite 2"{
+    rolando.encontrar(espada)
+    rolando.encontrar(libro)
+    rolando.encontrar(collar)
+
+  // #{espada, libro} == #{libro,espada}
+
+    assert.equals(#{espada, libro}, rolando.artefactos().asSet())
+ }
+
+ test"rolando al principio no lleva nada"{
+    assert.that(rolando.artefactos().isEmpty())
+ }
+}
